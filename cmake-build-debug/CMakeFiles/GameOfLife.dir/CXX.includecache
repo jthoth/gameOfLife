@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thoth/CLionProjects/GameOfLife/main.cpp
+serial/ConwayGame.h
+/home/thoth/CLionProjects/GameOfLife/serial/ConwayGame.h
+view/Windows.h
+/home/thoth/CLionProjects/GameOfLife/view/Windows.h
+GL/glut.h
+-
+
+/home/thoth/CLionProjects/GameOfLife/serial/ConwayGame.h
+
+/home/thoth/CLionProjects/GameOfLife/view/Windows.h
+GL/gl.h
+-
+../serial/ConwayGame.h
+/home/thoth/CLionProjects/GameOfLife/serial/ConwayGame.h
+

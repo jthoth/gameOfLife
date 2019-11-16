@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/GameOfLife.dir/main.cpp.o CMakeFiles/GameOfLife.dir/view/Windows.cpp.o CMakeFiles/GameOfLife.dir/serial/ConwayGame.cpp.o  -o GameOfLife -lglut -lGLU -lGL 
