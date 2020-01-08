@@ -10,7 +10,8 @@ Game of Life | OpenCl
 This project is a homework, it is part of CC7515-1 (GPU Computing).
 # Description
 
-This homework is geared for  learning  or remembering those features of c++. The main idea is build a class that let us compute some matrix operations.
+
+The objective of the homework was to compare the performance of the game of life in the cpu vs gpu (OPENGL)
 
 ### Tech
 
