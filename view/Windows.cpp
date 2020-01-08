@@ -5,6 +5,7 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 #include "Windows.h"
+#include "../core/ConwayGame.h"
 
 #define WHITE 1.0, 1.0, 1.0
 #define BLACK 0.0, 0.0, 0.0

@@ -2,7 +2,7 @@
 // Created by thoth on 11/16/19.
 //
 #  include <GL/gl.h>
-#include "../serial/ConwayGame.h"
+#include "../core/ConwayGame.h"
 
 #ifndef GAMEOFLIFE_WINDOWS_H
 #define GAMEOFLIFE_WINDOWS_H
@@ -11,7 +11,6 @@
 class Windows {
 
 private:
-
     ConwayGame game;
     const GLfloat left = 0.0, right = 1.0;
     const GLfloat bottom = 1.0, top = 0.0;

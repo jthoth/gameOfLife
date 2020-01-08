@@ -8,7 +8,8 @@
 #include <fstream>
 #include <iostream>
 
-OpenClProgram::OpenClProgram(std::string kernel) : kernel(std::move(kernel)) {}
+OpenClProgram::OpenClProgram(std::string kernel) :
+kernel(std::move(kernel)) {}
 
 cl::Platform  OpenClProgram::getPlatform(){
     std::vector<cl::Platform> platforms;
