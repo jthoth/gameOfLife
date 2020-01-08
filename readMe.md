@@ -18,6 +18,9 @@ This homework is geared for  learning  or remembering those features of c++. The
 * [C++ v14]- Programming language.
 * [Clion] - Cross-Platform IDE for C and C++ by JetBrains
 
+### Compilation
+
+This code only was tested in linux mint with OpenCl 1.2 and CLion IDE.
 
 
 License
