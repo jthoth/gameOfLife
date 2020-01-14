@@ -5,16 +5,9 @@
 #include <string>
 #include "CpuVsGpu.h"
 #include "../core/ConwayGame.h"
-#include <sys/time.h>
 #include <iostream>
 #include <sstream>
-
-typedef unsigned long long timestamp_t;
-
-static timestamp_t get_timestamp (){
-    struct timeval now;  gettimeofday (&now, NULL);
-    return  now.tv_usec + (timestamp_t)now.tv_sec * 1000000;
-}
+#include <chrono>
 
 CpuVsGpu::CpuVsGpu(const std::string& file) {
     this->connection.open(file.c_str(), std::ios::out);
@@ -29,18 +22,19 @@ void CpuVsGpu::operator()(int xCells, int yCells) {
     save(xCells, yCells, gpu, "gpu");
 }
 
-void CpuVsGpu::save(int xCells, int yCells, ConwayGame &cpu, char *device) {
+void CpuVsGpu::save(int xCells, int yCells, ConwayGame &game, char *device) {
     std::ostringstream line;
     line << device <<","<< xCells <<","<< yCells
-         <<","<< computeElapsed(cpu)<< '\n';
+         <<","<< computeElapsed(game)<< '\n';
     this->connection << line.str();
 }
 
 double CpuVsGpu::computeElapsed(ConwayGame &game) {
-    timestamp_t t0 = get_timestamp();
+    auto start = std::chrono::steady_clock::now();
     game.iterRules();
-    timestamp_t t1 = get_timestamp();
-    return (t1 - t0) / 1000000.0L;
+    auto end =  std::chrono::steady_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>
+            (end - start).count()/1e6;
 }
 
 CpuVsGpu::~CpuVsGpu() {

@@ -42,8 +42,8 @@ void visualization(int argc, char **argv){
 
 int main(int argc, char **argv){
 
-    visualization(argc, argv);
-//    benchmark();
+//    visualization(argc, argv);
+    benchmark();
 
     return 0;
 }
